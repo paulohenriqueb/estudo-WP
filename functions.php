@@ -19,5 +19,14 @@ if(!function_exists('_wp_render_title_tag'))
 	add_action('wp_head', 'phtheme_wp_title');
 }
 
+//register the custom navigation
+
+require_once(get_template_directory().'/class-wp-bootstrap-navwalker.php');
+
+//menus register
+
+register_nav_menus(array(
+	'principal' => __('Menu principal', 'PH tema')
+));
 
 ?>
